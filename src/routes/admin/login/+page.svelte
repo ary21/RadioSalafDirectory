@@ -1,13 +1,13 @@
 <script lang="ts">
   export let form: any;
-  let email = '';
+  let email = form?.values?.email ?? '';
   let password = '';
 </script>
 
 <main>
   <h1>Admin Login</h1>
   {#if form?.error}
-    <div class="error">{form.error}</div>
+    <div class="alert error">{form.error}</div>
   {/if}
   <form method="post">
     <label>
@@ -21,3 +21,9 @@
     <button type="submit">Login</button>
   </form>
 </main>
+
+<style>
+  .alert.error { color: white; background: #b00; padding: 0.75rem; margin-bottom: 1rem; }
+  label { display: block; margin-bottom: 1rem; }
+  input { width: 100%; padding: 0.5rem; margin-top: 0.25rem; }
+</style>
