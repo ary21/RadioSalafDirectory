@@ -1,0 +1,71 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  adminId   String
+  admin     Admin    @relation(fields: [adminId], references: [id])
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Station {
+  id                   String   @id @default(cuid())
+  name                 String
+  city                 String?
+  frequencyLabel       String?
+  websiteUrl           String?
+  streamUrl            String?
+  tags                 String?
+  status               StationStatus @default(PENDING_REVIEW)
+  visibility           Visibility    @default(PRIVATE)
+  permissionContactAt  DateTime?
+  permissionResponseAt DateTime?
+  permissionNote       String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+enum StationStatus {
+  PENDING_REVIEW
+  PENDING_PERMISSION
+  APPROVED_PUBLIC
+  APPROVED_PRIVATE
+  REJECTED
+}
+
+enum Visibility {
+  PUBLIC
+  PRIVATE
+}
+
+model Submission {
+  id             String   @id @default(cuid())
+  name           String
+  city           String?
+  frequencyLabel String?
+  websiteUrl     String?
+  streamUrlGuess String?
+  note           String?
+  status         SubmissionStatus @default(PENDING)
+  createdAt      DateTime @default(now())
+}
+
+enum SubmissionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
