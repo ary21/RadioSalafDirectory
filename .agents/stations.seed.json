@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Radio Rodja",
+    "city": "Cileungsi, Bogor",
+    "frequencyLabel": "756 AM",
+    "websiteUrl": "https://www.radiorodja.com/live/",
+    "streamUrl": null,
+    "tags": "kajian,sunnah,rodja-network",
+    "status": "PENDING_PERMISSION",
+    "visibility": "PRIVATE",
+    "note": "Sudah dikonfirmasi user aktif streaming online. Stream URL perlu diambil manual via DevTools di halaman live."
+  },
+  {
+    "name": "Radio Tarbiyah Sunnah",
+    "city": "Makassar",
+    "frequencyLabel": null,
+    "websiteUrl": "https://radiotarbiyahsunnah.com/",
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_PERMISSION",
+    "visibility": "PRIVATE",
+    "note": "Sudah dikonfirmasi user aktif streaming online. Stream URL perlu diambil manual via DevTools."
+  },
+  {
+    "name": "Radio Muslim",
+    "city": "Yogyakarta",
+    "frequencyLabel": null,
+    "websiteUrl": "https://radiomuslim.com/",
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Nama & website cukup dikenal, stream URL & keaktifan belum diverifikasi ulang — cek manual dulu."
+  },
+  {
+    "name": "Radio Arrisalah",
+    "city": "Batu, Malang",
+    "frequencyLabel": null,
+    "websiteUrl": null,
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Ditambahkan sesuai permintaan user. Website & stream URL resmi belum diverifikasi — perlu dicari manual."
+  },
+  {
+    "name": "Rodja Majalengka",
+    "city": "Majalengka",
+    "frequencyLabel": "93.1 FM",
+    "websiteUrl": null,
+    "streamUrl": null,
+    "tags": "kajian,sunnah,rodja-network",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Disebut sebagai bagian jaringan Rodja di sumber pihak ketiga — belum diverifikasi langsung, cek dulu apakah masih aktif & terpisah dari Radio Rodja pusat."
+  },
+  {
+    "name": "Radio Salafy Indonesia (Rasyid)",
+    "city": null,
+    "frequencyLabel": null,
+    "websiteUrl": null,
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Ditemukan di direktori pihak ketiga (TuneIn/Zeno.fm) — nama & keaktifan belum diverifikasi langsung."
+  },
+  {
+    "name": "An-Nashihah Center",
+    "city": "Cirebon",
+    "frequencyLabel": null,
+    "websiteUrl": null,
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Belum diverifikasi langsung, ada kemungkinan salah atau nama sudah berubah — perlu dicek dulu sebelum dihubungi."
+  },
+  {
+    "name": "Al Ikhwan FM",
+    "city": null,
+    "frequencyLabel": null,
+    "websiteUrl": null,
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Ditemukan di direktori TuneIn — belum diverifikasi langsung, prioritas rendah sampai dicek ulang."
+  },
+  {
+    "name": "Radio Kajian Islam Ilmiah",
+    "city": null,
+    "frequencyLabel": null,
+    "websiteUrl": null,
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Nama umum, kemungkinan besar perlu klarifikasi apakah ini nama resmi stasiun tertentu atau label generik — cek dulu sebelum proses izin."
+  },
+  {
+    "name": "Madinah FM",
+    "city": null,
+    "frequencyLabel": "99.9 FM",
+    "websiteUrl": null,
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Ditemukan di direktori pihak ketiga (mytuner-radio) — belum diverifikasi langsung."
+  },
+  {
+    "name": "Cahaya Hidayah Sunnah",
+    "city": null,
+    "frequencyLabel": null,
+    "websiteUrl": null,
+    "streamUrl": null,
+    "tags": "kajian,sunnah",
+    "status": "PENDING_REVIEW",
+    "visibility": "PRIVATE",
+    "note": "Ditemukan di direktori Zeno.fm — belum diverifikasi langsung, kemungkinan nama tidak lengkap/akurat."
+  }
+]
