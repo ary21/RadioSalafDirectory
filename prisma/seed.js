@@ -1,12 +1,19 @@
-const { PrismaClient } = require('@prisma/client');
-const stations = require('../.agents/stations.seed.json');
+import { PrismaClient } from '@prisma/client';
+import stations from '../.agents/stations.seed.json' assert { type: 'json' };
 
 const prisma = new PrismaClient();
 
 async function main() {
-  // Create default admin (passwordHash placeholder — replace after installing argon2)
+  let passwordHash = 'changeme';
+  try {
+    const { hash } = await import('argon2');
+    passwordHash = await hash('changeme');
+  } catch (e) {
+    console.warn('argon2 not available — creating admin with placeholder passwordHash. Install argon2 and re-seed to secure the admin password.');
+  }
+
   await prisma.admin.create({
-    data: { email: 'admin@example.com', passwordHash: 'changeme' }
+    data: { email: 'admin@example.com', passwordHash }
   });
 
   for (const s of stations) {

@@ -12,6 +12,7 @@ model Admin {
   email        String   @unique
   passwordHash String
   createdAt    DateTime @default(now())
+  sessions     Session[]
 }
 
 model Session {
@@ -30,26 +31,13 @@ model Station {
   websiteUrl           String?
   streamUrl            String?
   tags                 String?
-  status               StationStatus @default(PENDING_REVIEW)
-  visibility           Visibility    @default(PRIVATE)
+  status               String @default("PENDING_REVIEW")
+  visibility           String @default("PRIVATE")
   permissionContactAt  DateTime?
   permissionResponseAt DateTime?
   permissionNote       String?
   createdAt            DateTime @default(now())
   updatedAt            DateTime @updatedAt
-}
-
-enum StationStatus {
-  PENDING_REVIEW
-  PENDING_PERMISSION
-  APPROVED_PUBLIC
-  APPROVED_PRIVATE
-  REJECTED
-}
-
-enum Visibility {
-  PUBLIC
-  PRIVATE
 }
 
 model Submission {
@@ -60,12 +48,7 @@ model Submission {
   websiteUrl     String?
   streamUrlGuess String?
   note           String?
-  status         SubmissionStatus @default(PENDING)
+  status         String @default("PENDING")
   createdAt      DateTime @default(now())
 }
 
-enum SubmissionStatus {
-  PENDING
-  APPROVED
-  REJECTED
-}
