@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let data: { stations: Array<any> };
+  const { data } = $props();
   import AudioPlayer from '$lib/components/AudioPlayer.svelte';
 </script>
 

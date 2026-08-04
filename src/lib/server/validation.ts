@@ -69,3 +69,30 @@ export function validateStationForm(form: URLSearchParams) {
 
 	return { values, errors };
 }
+
+export function validateSubmissionForm(form: URLSearchParams) {
+	const values = {
+		name: String(form.get('name') || '').trim(),
+		city: String(form.get('city') || '').trim(),
+		frequencyLabel: String(form.get('frequencyLabel') || '').trim(),
+		websiteUrl: String(form.get('websiteUrl') || '').trim(),
+		streamUrlGuess: String(form.get('streamUrlGuess') || '').trim(),
+		note: String(form.get('note') || '').trim()
+	};
+
+	const errors: Partial<Record<keyof typeof values, string>> = {};
+
+	if (!values.name) {
+		errors.name = 'Name is required.';
+	}
+
+	if (values.websiteUrl && !isValidUrl(values.websiteUrl)) {
+		errors.websiteUrl = 'Website URL must be valid.';
+	}
+
+	if (values.streamUrlGuess && !isValidUrl(values.streamUrlGuess)) {
+		errors.streamUrlGuess = 'Stream URL must be valid.';
+	}
+
+	return { values, errors };
+}

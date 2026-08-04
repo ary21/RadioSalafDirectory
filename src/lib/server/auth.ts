@@ -1,12 +1,10 @@
 import { prisma } from './db';
-import crypto from 'crypto';
+import { randomBytes } from 'node:crypto';
 
 export async function hashPassword(password: string): Promise<string> {
   try {
-    // dynamic import so project still loads before dev deps installed
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const argon2 = require('argon2');
-    return await argon2.hash(password);
+    const { hash } = await import('argon2');
+    return await hash(password);
   } catch (e) {
     console.warn('argon2 not installed — returning plain password (unsafe). Install argon2 and re-seed.');
     return password;
@@ -15,9 +13,8 @@ export async function hashPassword(password: string): Promise<string> {
 
 export async function verifyPassword(hash: string, password: string): Promise<boolean> {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const argon2 = require('argon2');
-    return await argon2.verify(hash, password);
+    const { verify } = await import('argon2');
+    return await verify(hash, password);
   } catch (e) {
     console.warn('argon2 not installed — performing plain compare (unsafe).');
     return hash === password;
@@ -25,7 +22,7 @@ export async function verifyPassword(hash: string, password: string): Promise<bo
 }
 
 export function generateSessionToken(): string {
-  return crypto.randomBytes(32).toString('hex');
+  return randomBytes(32).toString('hex');
 }
 
 export async function createSession(adminId: string) {

@@ -1,14 +1,14 @@
 <script lang="ts">
-  export let form: any;
+  const { form } = $props();
 
-  let name = form?.values?.name ?? '';
-  let city = form?.values?.city ?? '';
-  let frequencyLabel = form?.values?.frequencyLabel ?? '';
-  let websiteUrl = form?.values?.websiteUrl ?? '';
-  let streamUrl = form?.values?.streamUrl ?? '';
-  let tags = form?.values?.tags ?? '';
-  let status = form?.values?.status ?? 'PENDING_REVIEW';
-  let visibility = form?.values?.visibility ?? 'PRIVATE';
+  $state name = form?.values?.name ?? '';
+  $state city = form?.values?.city ?? '';
+  $state frequencyLabel = form?.values?.frequencyLabel ?? '';
+  $state websiteUrl = form?.values?.websiteUrl ?? '';
+  $state streamUrl = form?.values?.streamUrl ?? '';
+  $state tags = form?.values?.tags ?? '';
+  $state status = form?.values?.status ?? 'PENDING_REVIEW';
+  $state visibility = form?.values?.visibility ?? 'PRIVATE';
 </script>
 
 <main>

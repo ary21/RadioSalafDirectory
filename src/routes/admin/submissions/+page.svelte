@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let data: { submissions: Array<any> };
+  const { data } = $props();
 </script>
 
 <main>

@@ -29,7 +29,7 @@ export const actions: Actions = {
     cookies.set('session', token, {
       httpOnly: true,
       path: '/',
-      secure: process.env.NODE_ENV === 'production',
+      secure: import.meta.env.MODE === 'production',
       sameSite: 'lax',
       expires
     });

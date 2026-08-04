@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let src: string | null = null;
+  const { src } = $props();
   let audio: HTMLAudioElement | null = null;
   let playing = false;
 

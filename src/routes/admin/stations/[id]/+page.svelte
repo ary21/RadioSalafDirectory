@@ -1,6 +1,5 @@
 <script lang="ts">
-  export let data: any;
-  export let form: any;
+  const { data, form } = $props();
 
   let name = form?.values?.name ?? data.station.name;
   let city = form?.values?.city ?? data.station.city ?? '';

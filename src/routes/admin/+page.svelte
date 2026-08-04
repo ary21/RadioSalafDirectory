@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let data: { stations: Array<any>; admin: any };
+  const { data } = $props();
 </script>
 
 <main>
