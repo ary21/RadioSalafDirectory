@@ -10,7 +10,7 @@
   let status = form?.values?.status ?? data.station.status;
   let visibility = form?.values?.visibility ?? data.station.visibility;
   let message = form?.message ?? null;
-  let errors = form?.errors ?? {};
+  let errors: Record<string, string> = form?.errors ?? {};
 </script>
 
 <main>

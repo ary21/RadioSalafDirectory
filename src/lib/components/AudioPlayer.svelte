@@ -23,8 +23,8 @@
 
 {#if src}
   <div class="audio-player">
-    <audio bind:this={audio} src={src} on:play={onPlay} on:pause={onPause} preload="none"></audio>
-    <button on:click={toggle}>{playing ? 'Pause' : 'Play'}</button>
+    <audio bind:this={audio} src={src} onplay={onPlay} onpause={onPause} preload="none"></audio>
+    <button onclick={toggle}>{playing ? 'Pause' : 'Play'}</button>
   </div>
 {:else}
   <div>No stream available</div>

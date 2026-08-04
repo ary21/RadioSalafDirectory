@@ -75,7 +75,7 @@
     <div class="alert error">{errors._form}</div>
   {/if}
 
-  <form on:submit|preventDefault={handleSubmit}>
+  <form onsubmit={handleSubmit}>
     <label>
       Nama Radio
       <input name="name" bind:value={name} required />
