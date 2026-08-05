@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  const { form, data } = $props();
+  export let form: any;
+  export let data: any;
 
   let name = form?.values?.name ?? '';
   let city = form?.values?.city ?? '';
@@ -122,7 +123,7 @@
 <style>
   form { display: grid; gap: 1rem; max-width: 700px; }
   label { display: grid; gap: 0.35rem; font-weight: 600; }
-  input, select, textarea { width: 100%; padding: 0.65rem; border: 1px solid #ccc; border-radius: 0.35rem; }
+  input, textarea { width: 100%; padding: 0.65rem; border: 1px solid #ccc; border-radius: 0.35rem; }
   .field-error { color: red; font-size: 0.9rem; }
   .alert { padding: 0.75rem; margin-bottom: 1rem; border-radius: 0.35rem; }
   .alert.success { background: #2ecc71; color: white; }

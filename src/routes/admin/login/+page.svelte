@@ -1,5 +1,5 @@
 <script lang="ts">
-  const { form } = $props();
+  export let form: any;
   let email = form?.values?.email ?? '';
   let password = '';
 </script>

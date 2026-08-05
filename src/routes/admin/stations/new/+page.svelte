@@ -1,5 +1,5 @@
 <script lang="ts">
-  const { form } = $props();
+  export let form: any;
 
   let name = form?.values?.name ?? '';
   let city = form?.values?.city ?? '';
@@ -80,7 +80,7 @@
 <style>
   form { display: grid; gap: 1rem; max-width: 700px; }
   label { display: grid; gap: 0.35rem; font-weight: 600; }
-  input, select, textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 0.35rem; }
+  input, select { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 0.35rem; }
   .field-error { color: red; font-size: 0.9rem; }
   .alert.error { color: white; background: #b00; padding: 0.75rem; margin-bottom: 1rem; border-radius: 0.35rem; }
   button { padding: 0.85rem 1.25rem; background: #111; color: white; border: none; border-radius: 0.35rem; cursor: pointer; }
