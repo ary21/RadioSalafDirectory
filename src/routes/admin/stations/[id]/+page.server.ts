@@ -35,5 +35,9 @@ export const actions: Actions = {
     });
 
     throw redirect(303, '/admin');
+  },
+  delete: async ({ params }) => {
+    await prisma.station.delete({ where: { id: params.id } });
+    throw redirect(303, '/admin');
   }
 };

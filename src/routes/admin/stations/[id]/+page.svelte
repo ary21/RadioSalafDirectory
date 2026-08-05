@@ -76,11 +76,18 @@
         <span class="field-error">{errors.visibility}</span>
       {/if}
     </label>
-    <button type="submit">Save</button>
+    <div class="actions">
+      <button type="submit">Save</button>
+      <button type="submit" formaction="?/delete" formmethod="post" class="danger">Delete</button>
+    </div>
   </form>
 </main>
 
 <style>
   .field-error { color: red; font-size: 0.9rem; display: block; }
   .alert.error { color: white; background: #b00; padding: 0.75rem; margin-bottom: 1rem; }
+  .actions { display: flex; gap: 0.75rem; margin-top: 1rem; }
+  .actions button { padding: 0.85rem 1.25rem; border: none; border-radius: 0.35rem; cursor: pointer; }
+  .actions .danger { background: #c0392b; color: white; }
+  .actions button:not(.danger) { background: #111; color: white; }
 </style>
